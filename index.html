@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeira Letra em Maiúsculo</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    button {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: blueviolet;
+        color: aliceblue;
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    button:hover {
+        padding: 10px;
+        border: none;
+        color: rgb(255, 255, 255);
+        background-color: black;
+    }
+</style>
+
+<body>
+    <h1>Digite seu nome</h1>
+    <input type="text" id="inputNome">
+    <button onclick="mostrarPrimeiraLetraMaiuscula()">Mostrar Primeira Letra em Maiúsculo</button>
+    <h2 id="primeiraLetraMaiuscula"></h2>
+
+    <script>
+        function mostrarPrimeiraLetraMaiuscula() {
+            // Capturar o valor digitado pelo usuário
+            const nome = document.getElementById('inputNome').value;
+
+            // Verificar se a primeira letra do nome já está em maiúsculo
+            if (nome.charAt(0) === nome.charAt(0).toUpperCase()) {
+                alert("O nome já está em maiúsculo: " + nome);
+            } else {
+                // Converter a primeira letra do nome para maiúscula
+                const primeiraLetraMaiuscula = nome.charAt(0).toUpperCase() + nome.slice(1);
+                alert("Que nome lindo, : " + nome );
+                document.getElementById('primeiraLetraMaiuscula').textContent = primeiraLetraMaiuscula;
+            }
+        }
+    </script>
+</body>
+
+</html>
