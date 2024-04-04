@@ -45,11 +45,11 @@
 
             // Verificar se a primeira letra do nome já está em maiúsculo
             if (nome.charAt(0) === nome.charAt(0).toUpperCase()) {
-                alert("O nome já está em maiúsculo: " + nome);
+                alert("O nome já está em maiúsculo, " + nome,  "tente colocar o nome minusculo");
             } else {
                 // Converter a primeira letra do nome para maiúscula
                 const primeiraLetraMaiuscula = nome.charAt(0).toUpperCase() + nome.slice(1);
-                alert("Que nome lindo, : " + nome );
+                alert("Que nome lindo, " + nome );
                 document.getElementById('primeiraLetraMaiuscula').textContent = primeiraLetraMaiuscula;
             }
         }
